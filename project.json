@@ -5,6 +5,7 @@
   "dependencies": {
     "BalaReva.EasyPowerPoint.Activities": "[4.0.2]",
     "BalaReva.PowerPoint.Activities": "[3.0.0]",
+    "Edp.PowerPoint.Activities": "[2.0.0]",
     "PowerPoint.Activities": "[1.0.3.13]",
     "UiPath.Excel.Activities": "[2.7.2]",
     "UiPath.GSuite.Activities": "[1.4.0]",
