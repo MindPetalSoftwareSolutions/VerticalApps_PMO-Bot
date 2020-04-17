@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>725,4530</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>659,4749</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -79,6 +79,7 @@
       <Variable x:TypeArguments="x:String" Default="https://id.atlassian.com/login" Name="JIRA_URL" />
       <Variable x:TypeArguments="s:DateTime" Default="[Today]" Name="DateToday" />
       <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Input\Robotic Process Automation PMO.pptx&quot;]" Name="Userhome" />
+      <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)]" Name="User" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -452,8 +453,8 @@
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
     <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="597,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:MoveFile ContinueOnError="{x:Null}" Destination="Data\Input\Jira.csv" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="597,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="C:\Users\me\Downloads\Jira.csv" />
-    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[JIRAexportTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Data\Input\Jira.csv" sap:VirtualizedContainerService.HintSize="597,152" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[User + &quot;\Documents\UiPath\Data\Input\Jira.csv&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="597,157" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="C:\Users\me\Downloads\Jira.csv" />
+    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[JIRAexportTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="[User + &quot;\Documents\UiPath\Data\Input\Jira.csv&quot;]" sap:VirtualizedContainerService.HintSize="597,152" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
     <ui:FilterDataTable DataTable="[JIRAexportTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="597,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[JIRAfilterTable]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
