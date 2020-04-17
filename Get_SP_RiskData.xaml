@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_SP_RiskData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1180,2833" sap2010:WorkflowViewState.IdRef="Get_SP_RiskData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_SP_RiskData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1180,2932" sap2010:WorkflowViewState.IdRef="Get_SP_RiskData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -54,6 +54,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Default="[Today]" Name="DateToday" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Input\Robotic Process Automation PMO.pptx&quot;]" Name="Userhome" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -373,8 +374,8 @@
         </ui:BrowserScope>
       </Sequence>
     </Sequence>
-    <p:AddDataTable DisplayName="Add data table" FilePath="C:\Users\me\Documents\UiPath\VerticalApps_PMO-Bot\Data\Input\Robotic Process Automation PMO.pptx" sap:VirtualizedContainerService.HintSize="1118,22" sap2010:WorkflowViewState.IdRef="AddDataTable_1" InputDataTable="[ExtractDataTable]" RowCountPerSlide="10" SlideNumber="3" />
-    <eps:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Scope" FilePath="C:\Users\me\Documents\UiPath\VerticalApps_PMO-Bot\Data\Input\Robotic Process Automation PMO.pptx" sap:VirtualizedContainerService.HintSize="1118,322" sap2010:WorkflowViewState.IdRef="PowerPointScope_1" Visible="False">
+    <p:AddDataTable DisplayName="Add data table" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1118,22" sap2010:WorkflowViewState.IdRef="AddDataTable_1" InputDataTable="[ExtractDataTable]" RowCountPerSlide="10" SlideNumber="3" />
+    <eps:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Scope" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1118,322" sap2010:WorkflowViewState.IdRef="PowerPointScope_1" Visible="False">
       <eps:PowerPointScope.Body>
         <ActivityAction x:TypeArguments="eps:PowerPointObject">
           <ActivityAction.Argument>
