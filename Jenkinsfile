@@ -16,13 +16,6 @@ pipeline {
                 sonarQubeScan()
             }
         }
-        stage('Build') {
-            steps {
-                script {
-                    pack() 
-                }
-            }
-        }
         stage('Orch Publish') {
             steps {
                 script {
