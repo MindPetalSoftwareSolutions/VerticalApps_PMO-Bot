@@ -1,4 +1,4 @@
-@Library('jenkins-shared-library@Justin-dev') _
+@Library('jenkins-shared-library') _
 
 pipeline {
     agent any
@@ -16,7 +16,7 @@ pipeline {
                 sonarQubeScan()
             }
         }
-        stage('Orch Publish') {
+        stage('Build and Publish') {
             steps {
                 script {
                     orchPublish("VerticalApps", 7) 
