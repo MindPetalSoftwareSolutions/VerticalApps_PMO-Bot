@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="656,5524" sap2010:WorkflowViewState.IdRef="Process_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="656,5671.2" sap2010:WorkflowViewState.IdRef="Process_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -53,7 +53,7 @@
       <AssemblyReference>BalaReva.Easy.PowerPoint</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="636,5464" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="636,5611.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="JIRAexportTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="JIRAfilterTable" />
@@ -511,9 +511,9 @@
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
     <p:AddDataTable DisplayName="Add data table" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="594.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataTable_2" InputDataTable="[JIRAfilterTable]" RowCountPerSlide="10" SlideNumber="2" />
-    <ui:CloseApplication DisplayName="Close Application 'chrome.exe Log'" sap:VirtualizedContainerService.HintSize="594.4,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
-      <ui:CloseApplication.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fc8a228d96503ca06c2d18560ef80691" Selector="&lt;html app='chrome.exe' title='Log in to continue - Log in with Atlassian account' /&gt;">
+    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'SPAN'" sap:VirtualizedContainerService.HintSize="594.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
+      <ui:UiElementExists.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="62a22487f0a316fb0736f8d0773c3a12" Selector="&lt;html app='chrome.exe' htmlwindowname='{}' title='You&amp;apos;re signed out of Office 365' /&gt;&lt;webctrl isleaf='1' tag='SPAN' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -521,8 +521,9 @@
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:CloseApplication.Target>
-    </ui:CloseApplication>
+      </ui:UiElementExists.Target>
+    </ui:UiElementExists>
+    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe Log'" sap:VirtualizedContainerService.HintSize="594.4,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="e0739d129af93a2691dc8c9c046140ab" Selector="&lt;html app='chrome.exe' title='Log in to continue - Log in with Atlassian account' /&gt;" WaitForReady="INTERACTIVE" />
     <eps:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Scope" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="594.4,320" sap2010:WorkflowViewState.IdRef="PowerPointScope_2" Visible="False">
       <eps:PowerPointScope.Body>
         <ActivityAction x:TypeArguments="eps:PowerPointObject">

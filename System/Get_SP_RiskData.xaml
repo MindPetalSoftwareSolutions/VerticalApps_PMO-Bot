@@ -387,18 +387,7 @@
         </ui:BrowserScope>
       </Sequence>
     </Sequence>
-    <ui:CloseApplication DisplayName="Close Application 'chrome.exe You're'" sap:VirtualizedContainerService.HintSize="1113.6,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
-      <ui:CloseApplication.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a1432860dab2ea5d3dfed4c2a0fa06a8" Selector="&lt;html app='chrome.exe' htmlwindowname='{}' title='You&amp;apos;re signed out of Office 365' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:CloseApplication.Target>
-    </ui:CloseApplication>
+    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe You're'" sap:VirtualizedContainerService.HintSize="1113.6,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="abe1af998d557398f2538789472bd947" Selector="&lt;html app='chrome.exe' htmlwindowname='{}' title='You&amp;apos;re signed out of Office 365' /&gt;" WaitForReady="INTERACTIVE" />
     <p:AddDataTable DisplayName="Add data table" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1113.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataTable_1" InputDataTable="[ExtractDataTable]" RowCountPerSlide="10" SlideNumber="3" />
     <eps:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Scope" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1113.6,446.4" sap2010:WorkflowViewState.IdRef="PowerPointScope_1" Visible="False">
       <eps:PowerPointScope.Body>
