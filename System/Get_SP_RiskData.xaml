@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_SP_RiskData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1175.2,3213.6" sap2010:WorkflowViewState.IdRef="Get_SP_RiskData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_SP_RiskData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1175.2,3324.8" sap2010:WorkflowViewState.IdRef="Get_SP_RiskData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -49,7 +49,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_SP_RiskData" sap:VirtualizedContainerService.HintSize="1155.2,3113.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_SP_RiskData" sap:VirtualizedContainerService.HintSize="1155.2,3264.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Default="[Today]" Name="DateToday" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
@@ -65,22 +65,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Login_Sharepoint" sap:VirtualizedContainerService.HintSize="1113.6,1364.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Login_Sharepoint" sap:VirtualizedContainerService.HintSize="1113.6,1368.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="OPMlogin" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="1072,22.4" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
-      <If Condition="[previouslogin]" sap:VirtualizedContainerService.HintSize="1072,1209.6" sap2010:WorkflowViewState.IdRef="If_2">
+      <If Condition="[previouslogin]" sap:VirtualizedContainerService.HintSize="1072,1213.6" sap2010:WorkflowViewState.IdRef="If_2">
         <If.Then>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="433.6,1060" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Sharepoint_URL]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="433.6,1064" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Sharepoint_URL]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,960" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,964" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="savepass" />
                   </Sequence.Variables>
@@ -89,7 +89,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[previouslogin]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[previouslogin]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7221ae2ee4454ef57fbb446665cccc07" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='i0281' tag='DIV' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -101,7 +101,7 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  i0116'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Username]">
+                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  i0116'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Username]">
                     <ui:TypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="93248a7271fc9e959212e020439e1c55" Selector="&lt;webctrl id='i0116' tag='INPUT' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -187,13 +187,13 @@
           </ui:OpenBrowser>
         </If.Then>
         <If.Else>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="594.4,980.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[Sharepoint_URL]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="594.4,984" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[Sharepoint_URL]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="561,881" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="560.8,884" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="savepass" />
                   </Sequence.Variables>
@@ -202,7 +202,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  idSIButton9'" sap:VirtualizedContainerService.HintSize="519,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  idSIButton9'" sap:VirtualizedContainerService.HintSize="519.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -224,7 +224,7 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[passnosave]" sap:VirtualizedContainerService.HintSize="519,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[passnosave]" sap:VirtualizedContainerService.HintSize="519.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="abf21dcdf0c507d26f4bbaf584adba14" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='i0281' tag='DIV' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -387,6 +387,18 @@
         </ui:BrowserScope>
       </Sequence>
     </Sequence>
+    <ui:CloseApplication DisplayName="Close Application 'chrome.exe You're'" sap:VirtualizedContainerService.HintSize="1113.6,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a1432860dab2ea5d3dfed4c2a0fa06a8" Selector="&lt;html app='chrome.exe' htmlwindowname='{}' title='You&amp;apos;re signed out of Office 365' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:CloseApplication.Target>
+    </ui:CloseApplication>
     <p:AddDataTable DisplayName="Add data table" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1113.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataTable_1" InputDataTable="[ExtractDataTable]" RowCountPerSlide="10" SlideNumber="3" />
     <eps:PowerPointScope ModifyPassword="{x:Null}" OpenPassword="{x:Null}" DisplayName="PowerPoint Scope" FilePath="[Userhome]" sap:VirtualizedContainerService.HintSize="1113.6,446.4" sap2010:WorkflowViewState.IdRef="PowerPointScope_1" Visible="False">
       <eps:PowerPointScope.Body>
