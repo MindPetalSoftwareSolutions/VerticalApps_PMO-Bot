@@ -64,6 +64,7 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="PMO Bot&#xA;[Retrives 1.) Done tasks from JIRA  2.) Risk Register from Sharepoint - inputs the data into powerpoint slides and emails them to a distribution list]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="692,795" sap2010:WorkflowViewState.IdRef="StateMachine_1">

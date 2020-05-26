@@ -65,7 +65,7 @@
       <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Output\Robotic Process Automation PMO.pptx&quot;]" Name="Userhome" />
       <Variable x:TypeArguments="x:Boolean" Name="passnosave" />
       <Variable x:TypeArguments="x:Boolean" Name="previouslogin" />
-      <Variable x:TypeArguments="x:String" Default="[in_Config(&quot;SharePT_URL&quot;).ToString]" Name="Sharepoint_URL" />
+      <Variable x:TypeArguments="x:String" Default="[in_Config(&quot;SharePT_URL&quot;).ToString]" Name="SharePT_URL" />
       <Variable x:TypeArguments="ss:SecureString" Name="Password" />
       <Variable x:TypeArguments="x:String" Name="Username" />
     </Sequence.Variables>
@@ -83,7 +83,7 @@
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="OPMlogin" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="1076,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[Username]" />
       <If Condition="[previouslogin]" sap:VirtualizedContainerService.HintSize="1076,1203" sap2010:WorkflowViewState.IdRef="If_2">
         <If.Then>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,1055" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[Sharepoint_URL]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="434,1055" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[SharePT_URL]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -196,7 +196,7 @@
           </ui:OpenBrowser>
         </If.Then>
         <If.Else>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="597,974" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[Sharepoint_URL]">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="597,974" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[SharePT_URL]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
