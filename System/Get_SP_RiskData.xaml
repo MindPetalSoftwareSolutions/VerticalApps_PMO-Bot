@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Get_SP_RiskData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ep="clr-namespace:Edp.PowerPoint;assembly=Edp.PowerPoint" xmlns:eps="clr-namespace:Edp.PowerPoint.Scope;assembly=Edp.PowerPoint" xmlns:eps1="clr-namespace:Edp.PowerPoint.Slides;assembly=Edp.PowerPoint" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PowerpointCreator;assembly=PowerpointCreator" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_Config" Type="InOutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_SPTURL" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -64,7 +64,7 @@
       <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Output\Robotic Process Automation PMO.pptx&quot;]" Name="Userhome" />
       <Variable x:TypeArguments="x:Boolean" Name="passnosave" />
       <Variable x:TypeArguments="x:Boolean" Name="previouslogin" />
-      <Variable x:TypeArguments="x:String" Default="[in_Config(&quot;SharePT_URL&quot;).ToString]" Name="SharePT_URL" />
+      <Variable x:TypeArguments="x:String" Default="[in_SPTURL]" Name="SharePT_URL" />
       <Variable x:TypeArguments="ss:SecureString" Name="Password" />
       <Variable x:TypeArguments="x:String" Name="Username" />
     </Sequence.Variables>
