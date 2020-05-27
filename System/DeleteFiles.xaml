@@ -56,6 +56,6 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Output\Robotic Process Automation PMO.pptx&quot;]" />
     <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delete_2" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Documents\UiPath\VerticalApps_PMO-Bot\Data\Input\Jira.csv&quot;]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Files Deleted (JIRA CSV &amp; Fomatted PPT&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Files Deleted - JIRA CSV &amp; Fomatted PPT&quot;]" />
   </Sequence>
 </Activity>
